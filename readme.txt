@@ -1,0 +1,7 @@
+flatpak
+
+
+Snaps
+
+
+appimage

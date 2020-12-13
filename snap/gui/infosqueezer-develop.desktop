@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Example WebKit2Gtk
+Type=Application
+
+Exec=example-webkit2gtk
+Icon=${SNAP}/meta/gui/snap.png
+Categories=Office;
+
+Terminal=false
+
+Version=1.0
+Comment=An example how to use packaging for Linux Apps.
+Comment[en]=An example how to use packaging for Linux Apps.
+Comment[de]=Ein Beispiel zur Packetierung von Linux Andwendung.
+
