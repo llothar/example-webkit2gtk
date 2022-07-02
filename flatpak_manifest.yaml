@@ -1,0 +1,39 @@
+app-id: app.filesqueezer.example
+
+runtime: org.gnome.Platform/x86_64/42
+sdk: org.gnome.Sdk/x86_64/42
+
+
+command: example
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=x11
+  - --socket=session-bus
+  - --share=ipc
+  - --share=network
+  - --filesystem=host
+
+modules:
+
+  - name: webkit2gtk
+    buildsystem: cmake
+    builddir: true
+    config-opts: [
+    	"-DCMAKE_BUILD_TYPE=Release",
+    	"-DUSE_GTK4=ON",
+    	"-DPORT=GTK",
+    	"-DENABLE_BUBBLEWRAP_SANDBOX=OFF"
+    ]
+
+    sources:
+      - type: archive
+        url: "https://webkitgtk.org/releases/webkitgtk-2.36.3.tar.xz"
+        sha256: "732fcf8c4ec644b8ed28b46ebbd7c1ebab9d9e0afea9bdf5e5d12786afc478d1"
+
+  - name: program
+    buildsystem: cmake
+    builddir: true
+    sources:
+      - type: dir
+        path: .

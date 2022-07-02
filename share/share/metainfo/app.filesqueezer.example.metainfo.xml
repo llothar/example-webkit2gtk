@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>app.filesqueezer.example</id>
+    <metadata_license>MIT</metadata_license>
+    <name>Example</name>
+    <summary>Web Page Viewer</summary>
+    <description>
+      <p>
+        This is example code to show how to package a simple program which uses Gtk4 and WebKit2Gtk
+      </p>
+    </description>
+    <url type="homepage">https://example.filesqueezer.app</url>
+    <update_contact>llothar@example.com</update_contact>
+    <project_license>GPL-3.0+</project_license>
+    <developer_name>Lothar Scholz</developer_name>
+    <provides>
+      <id>app.filesqueezer.example</id>
+    </provides>
+    <releases>
+        <release version="1.0" date="2022-07-01"/>
+    </releases>
+</component>

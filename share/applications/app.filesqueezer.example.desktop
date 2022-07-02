@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Example Program
+Type=Application
+
+Exec=example
+Icon=app.filesqueezer.example
+Categories=Office
+Terminal=false
+
+Version=1.0
+Comment=An example how to use packaging for Linux Apps.
+Comment[en]=An example how to use packaging for Linux Apps.
+Comment[de]=Ein Beispiel zur Packetierung von Linux Anwendungen.
