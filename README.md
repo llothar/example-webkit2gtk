@@ -18,7 +18,7 @@ and soon coming
 Build and install with the following command:
 
 ```
-flatpak-builder --user --install --force-clean ../build_example example/flatpak_manifest.yaml
+flatpak-builder --user --install --force-clean ../build_example example-webkit2gtk/flatpak_manifest.yaml
 ```
 
 After install, it's integrated in the gnome shell desktop.
