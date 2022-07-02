@@ -11,3 +11,19 @@ and soon coming
 
 - Debian .deb Package
 - RedHat .rpm Package
+
+
+# Flatpak Building
+
+Build and install with the following command:
+
+```
+flatpak-builder --user --install --force-clean ../build_example example/flatpak_manifest.yaml
+```
+
+After install, it's integrated in the gnome shell desktop.
+You can run it nevertheless with the following command:
+
+```
+flatpak run app.filesqueezer.example
+```
