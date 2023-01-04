@@ -1,3 +1,7 @@
+# flatpak-builder --user --install --force-clean example example-webkit2gtk/flatpak_manifest.yaml
+# flatpak run app.filesqueezer.example
+
+
 app-id: app.filesqueezer.example
 
 runtime: org.fedoraproject.Platform/x86_64/f37
@@ -16,7 +20,9 @@ finish-args:
 
 modules:
 
-  - name: myfoobar
+  # The big problem is that cmake building is broken on fedora and nobody seems to care.
+  # It needs RPM packaging environment variables set, even if we just use fake ones.
+  - name: program
     buildsystem: simple
     build-commands: [
         "mkdir mybuild",
