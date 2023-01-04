@@ -1,10 +1,10 @@
 app-id: app.filesqueezer.example
 
-runtime: org.gnome.Platform/x86_64/42
-sdk: org.gnome.Sdk/x86_64/42
+runtime: org.fedoraproject.Platform/x86_64/f37
+sdk: org.fedoraproject.Sdk/x86_64/f37
 
+command: FooBar
 
-command: example
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
@@ -16,24 +16,13 @@ finish-args:
 
 modules:
 
-  - name: webkit2gtk
-    buildsystem: cmake
-    builddir: true
-    config-opts: [
-    	"-DCMAKE_BUILD_TYPE=Release",
-    	"-DUSE_GTK4=ON",
-    	"-DPORT=GTK",
-    	"-DENABLE_BUBBLEWRAP_SANDBOX=OFF"
+  - name: myfoobar
+    buildsystem: simple
+    build-commands: [
+        "mkdir mybuild",
+        "export RPM_ARCH=x86_64;export RPM_PACKAGE_RELEASE=1;export RPM_PACKAGE_VERSION='1.1';export RPM_PACKAGE_NAME='Foo'; cd mybuild; cmake -DCMAKE_INSTALL_PREFIX:PATH=/app ..; make -v; make install",
+        "ls -la"
     ]
-
-    sources:
-      - type: archive
-        url: "https://webkitgtk.org/releases/webkitgtk-2.36.3.tar.xz"
-        sha256: "732fcf8c4ec644b8ed28b46ebbd7c1ebab9d9e0afea9bdf5e5d12786afc478d1"
-
-  - name: program
-    buildsystem: cmake
-    builddir: true
     sources:
       - type: dir
         path: .

@@ -17,6 +17,10 @@ and soon coming
 
 Build and install with the following command:
 
+
+Do a "flatpak install org.fedoraproject.Sdk/x86_64/f37"
+
+
 ```
 flatpak-builder --user --install --force-clean ../build_example example-webkit2gtk/flatpak_manifest.yaml
 ```

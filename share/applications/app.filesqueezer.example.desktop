@@ -2,7 +2,7 @@
 Name=Example Program
 Type=Application
 
-Exec=example
+Exec=FooBar
 Icon=app.filesqueezer.example
 Categories=Office
 Terminal=false

@@ -1,9 +1,7 @@
-add_executable(example "code.cpp")
+add_executable(FooBar "code.cpp")
 
-target_link_libraries(example PRIVATE PkgConfig::lib_glib)
-target_link_libraries(example PRIVATE PkgConfig::lib_gtk)
-target_link_libraries(example PRIVATE PkgConfig::lib_webkit)
+target_link_libraries(FooBar PRIVATE PkgConfig::lib_glib)
+target_link_libraries(FooBar PRIVATE PkgConfig::lib_gtk)
+target_link_libraries(FooBar PRIVATE PkgConfig::lib_webkit)
 
-install(TARGETS example) 
-
-
+install(TARGETS FooBar) 
