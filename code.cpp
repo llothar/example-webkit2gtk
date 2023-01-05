@@ -16,6 +16,7 @@ static void activate (GtkApplication* app, gpointer) {
   WebKitWebView *webView = WEBKIT_WEB_VIEW(webkit_web_view_new());
   g_signal_connect(webView, "close", G_CALLBACK(closeWebViewCb), window);
   webkit_web_view_load_uri(webView, "https://www.webkitgtk.org/");
+//  GtkWidget* webView = gtk_button_new_with_label("Fuck Me, It Works");
 
   gtk_window_set_child (GTK_WINDOW (window), GTK_WIDGET(webView));
   gtk_widget_grab_focus(GTK_WIDGET(webView));
